@@ -41,9 +41,9 @@ title(sprintf('Iterations per l of %s',s))
 %I choose l = 10e-3, 20e-3, 100e-3
 
 l_plot = [10e-3 20e-3 30e-3];
-[~, limit1] = fibonacciMethod(alpha,beta,l ,1);
-[~, limit2] = fibonacciMethod(alpha,beta,l ,1);
-[~, limit3] = fibonacciMethod(alpha,beta,l ,1);
+[~, limit1] = fibonacciMethod(alpha,beta,l_plot(1) ,1);
+[~, limit2] = fibonacciMethod(alpha,beta,l_plot(2) ,1);
+[~, limit3] = fibonacciMethod(alpha,beta,l_plot(3) ,1);
 
 limit1 = [-4 4;limit1];
 limit2 = [-4 4;limit2];

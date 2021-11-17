@@ -40,9 +40,9 @@ title(sprintf('Iterations per l of %s',s))
 %I choose l = 10e-3, 20e-3, 100e-3
 
 l_plot = [10e-3 20e-3 100e-3];
-[~, limit1] = goldenRatioMethod(alpha,beta,l ,1);
-[~, limit2] = goldenRatioMethod(alpha,beta,l ,1);
-[~, limit3] = goldenRatioMethod(alpha,beta,l ,1);
+[~, limit1] = goldenRatioMethod(alpha,beta,l_plot(1) ,1);
+[~, limit2] = goldenRatioMethod(alpha,beta,l_plot(2) ,1);
+[~, limit3] = goldenRatioMethod(alpha,beta,l_plot(3) ,1);
 
 limit1 = [-4 4;limit1];
 limit2 = [-4 4;limit2];
@@ -61,7 +61,7 @@ hold on
 plot(limit3(:,1))
 hold on
 plot(limit3(:,2))
-legend('limits for l= 10$^-2$','limits for l=2 $10^-2$ ','limits for l= 10$^-1$','Interpreter','latex')
+legend('limits for l= 10$^-2$','limits for l=2 $10^-2$ ','limits for l= 3 $10^-2$ ','Interpreter','latex')
 xlabel('Iterations')
 ylabel('Value of function f')
 title(sprintf('Limits alpha and beta of the iteration of %s',s))
