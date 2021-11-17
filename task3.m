@@ -37,7 +37,7 @@ ylabel('Iterations')
 title(sprintf('Iterations per l of %s',s))
 
 %--------------------------------------------------
-%I choose l = 10e-3, 20e-3, 100e-3
+%I choose l = 10e-3, 20e-3, 30e-3
 
 l_plot = [10e-3 20e-3 30e-3];
 [~, limit1] = fibonacciMethod(alpha,beta,l_plot(1) ,f);
@@ -61,9 +61,12 @@ hold on
 plot(limit3(:,1))
 hold on
 plot(limit3(:,2))
-legend('limits for l= 10$^-2$','limits for l=2 $10^-2$ ','limits for l= 10$^-1$','Interpreter','latex')
+legend('limits for l= 10$^-2$','limits for l=2 $10^-2$ ','limits for l= 3 * 10$^-3$','Interpreter','latex')
 xlabel('Iterations')
 ylabel('Value of function f')
 title(sprintf('Limits alpha and beta of the iteration of %s',s))
+fprintf('Limits for l= 10^-3 is [ %d, %d]\n',limit1(end,1),limit1(end,2))
+fprintf('Limits for l= 2 * 10^-3 is [ %d, %d]\n',limit2(end,1),limit2(end,2))
+fprintf('Limits for l= 3* 10^-3 is [ %d, %d]\n',limit2(end,1),limit2(end,2))
 end
 
