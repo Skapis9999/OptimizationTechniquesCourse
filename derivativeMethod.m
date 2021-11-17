@@ -6,20 +6,25 @@ function [k,limits] = derivativeMethod(a,b,l,f)
 
 limits = []; %all bounds for every k
 k = 0;
+n=0;
 
-n = -round(l/((b-a)*log(1/2)));
+while (0.5)^n>l/(b-a)
+    n=n+1;
+end
 
-for k = 1:1:n
+for i = 1:1:n
+    k = i;
     x = (a+b)/2;
     d = derivativeSelector(x,f);
     if d==0
-        return k
+        i = n; 
     elseif d > 0
         b = x;
+        limits = [limits;[a b]];
     else 
         a = x;
-    end
-    limits = [limits;[a b]];    
+        limits = [limits;[a b]];
+    end   
 end
 end
 
