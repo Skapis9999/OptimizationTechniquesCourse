@@ -81,7 +81,7 @@ legend('limits for l= 10$^-2$','limits for l=2 $10^-2$ ','limits for l= 10$^-1$'
 xlabel('Iterations')
 ylabel('Value of function f')
 title(sprintf('Limits alpha and beta of the iteration of %s',s))
-fprintf('Limits for l= 10^-3 is [ %d, %d]\n',limit1(end,1),limit1(end,2))
-fprintf('Limits for l= 2 * 10^-3 is [ %d, %d]\n',limit2(end,1),limit2(end,2))
-fprintf('Limits for l= 100^-3 is [ %d, %d]\n',limit2(end,1),limit2(end,2))
+% fprintf('Limits for l= 10^-3 is [ %d, %d] and %d\n',limit1(end,1),limit1(end,2),(limit1(end,2)-limit1(end,1)))
+% fprintf('Limits for l= 2 * 10^-3 is [ %d, %d]and %d\n',limit2(end,1),limit2(end,2),(limit2(end,2)-limit2(end,1)))
+% fprintf('Limits for l= 100^-3 is [ %d, %d]and %d\n',limit2(end,1),limit2(end,2),(limit3(end,2)-limit3(end,1)))
 end
