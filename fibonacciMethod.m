@@ -18,8 +18,8 @@ while  fibonacci(i)<(b-a)/l
 end
 
 for k = 1:1:(i-1)
-    x1 = a + fibonacci(i-k-1)/fibonacci(i-k+1)*(b-a);
-    x2 = a + fibonacci(i-k)/fibonacci(i-k+1)*(b-a);
+    x1 = a + fibonacci(i-k)/fibonacci(i-k+1)*(b-a);
+    x2 = a + fibonacci(i-k-1)/fibonacci(i-k+1)*(b-a);
     if k == i-1
         x2 = a + fibonacci(i-k)/fibonacci(i-k+1)*(b-a)+0.001;
     end
