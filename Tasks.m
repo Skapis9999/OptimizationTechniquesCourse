@@ -18,7 +18,7 @@ algorithm = [1 2 3 4];
 %3 is for Fibonacci method
 %4 is for Bisection method using derivative
 
-i=1; %select which of the 3 functions are optimised
+i=3; %select which of the 3 functions are optimised
 task1(lamda,alpha,beta,algorithm(1),i);
 task2(alpha,beta,algorithm(2),i);
 task3(alpha,beta,algorithm(3),i);
