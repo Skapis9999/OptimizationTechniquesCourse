@@ -24,7 +24,7 @@ end
 figure(1) 
 clf
 X = 1e-5:1e-5:100e-5; 
-Y = kappas;
+Y = 2.*kappas;
 stem(X*10000,Y,'BaseValue',2);
 xlabel('e $10^-4$','Interpreter','latex')
 ylabel('Iterations')
@@ -46,7 +46,7 @@ figure(2)
 clf
 X = 10e-3:1e-3:100e-3; 
 %Y = fliplr(kappas2);
-Y = kappas2;
+Y = 2.* kappas2;
 stem(X*100,Y,'BaseValue',0);
 xlabel('l 10$^-1$','Interpreter','latex')
 ylabel('Iterations')

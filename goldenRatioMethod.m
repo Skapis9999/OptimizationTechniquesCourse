@@ -20,6 +20,6 @@ while  b-a >= l
     %fprintf("bumb k = %d\n", k)
     limits = [limits;[a b]];
     %fprintf("a = %d", limits(1,k), "b = %d\n", limits(2,k))
-end
+end 
 end
 
