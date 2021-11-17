@@ -1,7 +1,5 @@
-function [outputArg1,outputArg2] = derivativeMethod(inputArg1,inputArg2)
-%DERIVATIVEMETHOD Summary of this function goes here
-%   Detailed explanation goes here
-outputArg1 = inputArg1;
-outputArg2 = inputArg2;
+function [k,limits] = derivativeMethod(a,b,l,f)
+
+
 end
 
