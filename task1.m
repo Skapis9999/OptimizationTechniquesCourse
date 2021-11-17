@@ -1,4 +1,4 @@
-function [lamda] = task1(lamda,alpha,beta,algorithm)
+function [lamda] = task1(lamda,alpha,beta,algorithm,f)
 
 %string for the algorithm
 s='';
@@ -16,7 +16,7 @@ end
 
 kappas = zeros([100 1]);
 for epsilon = 1e-5:1e-5:100e-5
-    [k, ~] = bisectionMethod(alpha,beta,lamda,epsilon,algorithm);
+    [k, ~] = bisectionMethod(alpha,beta,lamda,epsilon,f);
     kappas(round(epsilon/(1e-5))) = k;
 end
 
@@ -35,7 +35,7 @@ e = 0.001;
 limits = zeros([91 2]);
 %We know that l>2e so l>0.002
 for l = 10e-3:1e-3:100e-3
-    [k, limit] = bisectionMethod(alpha,beta,l,e,1);
+    [k, limit] = bisectionMethod(alpha,beta,l,e,f);
     kappas2(round((l-9e-3)/(1e-3))) = k;
     limits(round((l-9e-3)/(1e-3)), 1) = limit(k,1);
     limits(round((l-9e-3)/(1e-3)), 2) = limit(k,2);
@@ -55,9 +55,9 @@ title(sprintf('Iterations per l of %s',s))
 %I choose l = 10e-3, 20e-3, 100e-3
 
 l_plot = [10e-3 20e-3 100e-3];
-[~, limit1] = bisectionMethod(alpha,beta,l_plot(1),e,1);
-[~, limit2] = bisectionMethod(alpha,beta,l_plot(2),e,1);
-[~, limit3] = bisectionMethod(alpha,beta,l_plot(3),e,1);
+[~, limit1] = bisectionMethod(alpha,beta,l_plot(1),e,f);
+[~, limit2] = bisectionMethod(alpha,beta,l_plot(2),e,f);
+[~, limit3] = bisectionMethod(alpha,beta,l_plot(3),e,f);
 
 limit1 = [-4 4;limit1];
 limit2 = [-4 4;limit2];

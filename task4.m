@@ -1,4 +1,4 @@
-function [] = task4(alpha,beta,algorithm)
+function [] = task4(alpha,beta,algorithm,f)
 %string for the algorithm
 s='';
 if algorithm==1
@@ -19,7 +19,7 @@ e = 0.001;
 limits = zeros([91 2]);
 %We know that l>2e so l>0.002
 for l = 10e-3:1e-3:100e-3
-    [k, limit] = derivativeMethod(alpha,beta,l ,1);
+    [k, limit] = derivativeMethod(alpha,beta,l ,f);
     kappas2(round((l-9e-3)/(1e-3))) = k;
     limits(round((l-9e-3)/(1e-3)), 1) = limit(k,1);
     limits(round((l-9e-3)/(1e-3)), 2) = limit(k,2);
@@ -39,9 +39,9 @@ title(sprintf('Iterations per l of %s',s))
 %I choose l = 10e-3, 20e-3, 100e-3
 
 l_plot = [10e-3 20e-3 100e-3];
-[~, limit1] = goldenRatioMethod(alpha,beta,l ,1);
-[~, limit2] = goldenRatioMethod(alpha,beta,l ,1);
-[~, limit3] = goldenRatioMethod(alpha,beta,l ,1);
+[~, limit1] = goldenRatioMethod(alpha,beta,l ,f);
+[~, limit2] = goldenRatioMethod(alpha,beta,l ,f);
+[~, limit3] = goldenRatioMethod(alpha,beta,l ,f);
 
 limit1 = [-4 4;limit1];
 limit2 = [-4 4;limit2];
