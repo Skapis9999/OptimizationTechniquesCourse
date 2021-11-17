@@ -13,7 +13,7 @@ for k = 1:1:n
     x = (a+b)/2;
     d = derivativeSelector(x,f);
     if d==0
-        return k;
+        return k
     elseif d > 0
         b = x;
     else 

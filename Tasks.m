@@ -21,3 +21,4 @@ algorithm = [1 2 3 4];
 task1(lamda,alpha,beta,algorithm(1));
 task2(alpha,beta,algorithm(2));
 task3(alpha,beta,algorithm(3));
+task4(alpha,beta,algorithm(4));
