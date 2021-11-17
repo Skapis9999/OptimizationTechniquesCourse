@@ -14,6 +14,7 @@ else
     print("Wrong mode") 
 end
 
+%--------------------------------------------------
 kappas = zeros([100 1]);
 for epsilon = 1e-5:1e-5:100e-5
     [k, ~] = bisectionMethod(alpha,beta,lamda,epsilon,f);

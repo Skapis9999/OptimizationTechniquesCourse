@@ -16,7 +16,7 @@ end
 
 %--------------------------------------------------
 kappas2 = zeros([91 1]);
-e = 0.001;
+e = 0.001; %e selected
 limits = zeros([91 2]);
 %We know that l>2e so l>0.002
 for l = 10e-3:1e-3:100e-3

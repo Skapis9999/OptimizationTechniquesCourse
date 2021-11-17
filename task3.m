@@ -2,7 +2,6 @@ function [] = task3(alpha,beta,algorithm,f)
 
 %string for the algorithm
 s='';
-
 if algorithm==1
     s='Bisection method';
 elseif algorithm==2

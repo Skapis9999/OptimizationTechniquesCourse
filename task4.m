@@ -1,4 +1,5 @@
 function [] = task4(alpha,beta,algorithm,f)
+
 %string for the algorithm
 s='';
 if algorithm==1
