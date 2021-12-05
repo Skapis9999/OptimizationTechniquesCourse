@@ -32,5 +32,19 @@ epsilon = 0.001;
 %% 
 %%Method
 % d = gradientDescentFixed(epsilon, 1,1)
-d2 = gradientDescent(epsilon, 1,1)
+[d2, xs, ys] = gradientDescent(epsilon, -1,1);
 % d3 = gradientDescentArmijo(epsilon, 1,1)
+figure(2)
+surf(x,y,z)
+hold on
+scatter3(xs,ys,(xs.^3).*(exp((-xs.^2)-(ys.^4))),'+','r')
+hold on 
+scatter3(xs(end),ys(end),(xs(end)^3)*(exp((-xs(end)^2)-(ys(end)^4))),'p','y')
+
+figure(3)
+clf
+fcontour(@(x,y) (x^3)*(exp((-x^2)-(y^4))),[-2, 2])
+hold on
+scatter(xs,ys,'+','r')
+hold on 
+scatter(xs(end),ys(end),'p','k')
