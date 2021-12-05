@@ -31,6 +31,6 @@ epsilon = 0.001;
 
 %% 
 %%Method
-d = gradientDescentFixed(epsilon, 1,1)
-% d2 = gradientDescent(epsilon, 1,1)
-d3 = gradientDescentArmijo(epsilon, 1,1)
+% d = gradientDescentFixed(epsilon, 1,1)
+d2 = gradientDescent(epsilon, 1,1)
+% d3 = gradientDescentArmijo(epsilon, 1,1)

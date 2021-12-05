@@ -5,7 +5,7 @@ results = [f(x,y)];
 
 while norm(grad(x,y)) >= epsilon
 
-    fun = @(gamma)f(x-gamma.norm(f(x,y)));
+    fun = @(gamma)f(x-gamma*norm(f(x,y)));
     gamma0 = 1;
     gammaKappa = fminsearch(fun,gamma0); 
     d = grad(x,y);
