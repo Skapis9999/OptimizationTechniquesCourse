@@ -27,9 +27,10 @@ surf(x,y,z)
 %%Initiating values
 x0 = [0 -1 1];
 y0 = [0 -1 1];
-%gamma = [0.1 minGamma ArmijoGamma];
 epsilon = 0.001;
 
 %% 
 %%Method
-d = gradientDescentFixed(epsilon, 1,1);
+d = gradientDescentFixed(epsilon, 1,1)
+% d2 = gradientDescent(epsilon, 1,1)
+d3 = gradientDescentArmijo(epsilon, 1,1)
