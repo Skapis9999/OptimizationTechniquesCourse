@@ -33,7 +33,7 @@ epsilon = 0.001;
 %% 
 %%Method
 % d = gradientDescentFixed(epsilon, 1,1)
-[d2, xs, ys] = gradientDescent(epsilon, x0(1), y0(1));
+[d2, xs, ys] = gradientDescent(epsilon, x0(2), y0(2));
 % d3 = gradientDescentArmijo(epsilon, 1,1)
 figure(2)
 surf(x,y,z)
