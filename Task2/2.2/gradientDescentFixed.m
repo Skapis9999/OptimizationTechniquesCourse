@@ -1,8 +1,10 @@
-function results = gradientDescentFixed(epsilon,x,y)
+function [results, xs, ys] = gradientDescentFixed(epsilon,x,y)
 
 k=1;
 results = [f(x,y)];
 gammaKappa = 1;
+xs = [];
+ys = [];
 
 while norm(grad(x,y)) >= epsilon
     d = grad(x,y);
@@ -10,6 +12,8 @@ while norm(grad(x,y)) >= epsilon
     y = y - gammaKappa*d(2);  
     k = k+1;
     results = [results, f(x,y)];
+    xs = [xs, x];
+    ys = [ys, y];
 end  
 end
 

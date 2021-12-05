@@ -1,8 +1,6 @@
-function [results,xs,ys] = newtonMethodFixed(e,x,y)
-
+function [results,xs,ys] = newtonMethod(e,x,y)
 k=1;
 results = [f(x,y)];
-gammaKappa = 1;
 xs = [];
 ys = [];
 
@@ -15,6 +13,7 @@ while norm(d) >= e
         break
     end
     dk = -h'*d;
+    gammaKappa = goldenRatioMethod(x,y,dk);
     x = x  + gamma*dk(1);
     y = y  + gamma*dk(2);
 

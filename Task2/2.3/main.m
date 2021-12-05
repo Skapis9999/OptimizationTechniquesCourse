@@ -18,8 +18,8 @@ epsilon = 0.001;
 %%
 %%Method
 
-[d, xs, ys] = newtonMethodFixed(epsilon, x0(2), y0(2));
-
+% [d, xs, ys] = newtonMethodFixed(epsilon, x0(2), y0(2));
+[d, xs, ys] = newtonMethod(epsilon, x0(3), y0(3));
 
 x = linspace(-2,2,20);
 y = x';
