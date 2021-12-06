@@ -30,6 +30,9 @@ while norm(d) >= e
     xs = [xs, x];
 %     disp(2)
     ys = [ys, y];
+%     if k>1
+%         break
+%     end
 end
 end
 

@@ -16,9 +16,9 @@ epsilon = 0.001;
 
 %%
 %%Method
-i = 2; %x0 that we choose
-[~, xs, ys] = LevenbergMarquardtFixed(epsilon, x0(i), y0(i));
-% [~, xs, ys] = LevenbergMarquardtFixed(epsilon, x0(i), y0(i));
+i = 1; %x0 that we choose
+% [d, xs, ys] = LevenbergMarquardtFixed(epsilon, x0(i), y0(i));
+[d, xs, ys] = LevenbergMarquardt(epsilon, x0(i), y0(i));
 % [~, xs, ys] = LevenbergMarquardtArmijo(epsilon, x0(i), y0(i));
 
 x = linspace(-2,2,20);
@@ -28,6 +28,7 @@ z = (x.^3).*(exp((-x.^2)-(y.^4)));
 %%
 %%figures
 figure(1)
+clf
 surf(x,y,z)
 hold on
 scatter3(xs,ys,(xs.^3).*(exp((-xs.^2)-(ys.^4))),'+','r')
