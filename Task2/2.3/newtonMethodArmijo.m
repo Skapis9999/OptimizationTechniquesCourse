@@ -13,7 +13,7 @@ while norm(d) >= e
         break
     end
     dk = -h'*d;
-    gammaKappa = goldenRatioMethod(x,y,dk);
+    [x,y] = armijo(x,y,dk);
     x = x  + gamma*dk(1);
     y = y  + gamma*dk(2);
 
