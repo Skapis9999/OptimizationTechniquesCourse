@@ -1,4 +1,4 @@
-function [results,xs,ys] = newthonMethodArmijo(e,x,y)
+function [results,xs,ys] = newtonMethodArmijo(e,x,y)
 k=1;
 results = [f(x,y)];
 xs = [];
