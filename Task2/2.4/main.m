@@ -16,21 +16,26 @@ epsilon = 0.001;
 
 %%
 %%Method
-
-% [d, xs, ys] = LevenbergMarquardtFixed(epsilon, x0(2), y0(2));
-[d, xs, ys] = LevenbergMarquardtFixed(epsilon, x0(2), y0(2));
-
+i = 2; %x0 that we choose
+[~, xs, ys] = LevenbergMarquardtFixed(epsilon, x0(i), y0(i));
+% [~, xs, ys] = LevenbergMarquardtFixed(epsilon, x0(i), y0(i));
+% [~, xs, ys] = LevenbergMarquardtArmijo(epsilon, x0(i), y0(i));
 
 x = linspace(-2,2,20);
 y = x';
 z = (x.^3).*(exp((-x.^2)-(y.^4)));
 
+%%
+%%figures
 figure(1)
 surf(x,y,z)
 hold on
 scatter3(xs,ys,(xs.^3).*(exp((-xs.^2)-(ys.^4))),'+','r')
 hold on 
 scatter3(xs(end),ys(end),(xs(end)^3)*(exp((-xs(end)^2)-(ys(end)^4))),'p','y')
+title('z = $x^{3} * e^{-x^{2} - y^{4}}$ with steps for Levenberg Marquardt Method for gamma = 1 for (0,0)','Interpreter','latex')
+% title('z = $x^{3} * e^{-x^{2} - y^{4}}$ with steps for Levenberg Marquardt Method best gamma for (0,0)','Interpreter','latex')
+% title('z = $x^{3} * e^{-x^{2} - y^{4}}$ with steps for Levenberg Marquardt Method Armijo gamma for (-1,-1)','Interpreter','latex')
 
 figure(2)
 clf
@@ -39,3 +44,4 @@ hold on
 scatter(xs,ys,'+','r')
 hold on 
 scatter(xs(end),ys(end),'p','k')
+title('z = $x^{3} * e^{-x^{2} - y^{4}}$ with steps for Levenberg Marquardt Method for gamma = 1 for (0,0)','Interpreter','latex')

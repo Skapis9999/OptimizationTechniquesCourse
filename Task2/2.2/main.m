@@ -36,7 +36,7 @@ epsilon = 0.001;
 
 %% 
 %%Method
-i = 2; %x0 that we choose
+i = 3; %x0 that we choose
 % [~, xs, ys] = gradientDescentFixed(epsilon, x0(i), y0(i))
 % [~, xs, ys] = gradientDescent(epsilon, x0(i), y0(i));
 [~, xs, ys] = gradientDescentArmijo(epsilon, x0(i), y0(i))

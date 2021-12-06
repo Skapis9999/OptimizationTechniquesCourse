@@ -1,8 +1,8 @@
 function [results,xs,ys] = LevenbergMarquardt(e,x,y)
 k=1;
 results = [f(x,y)];
-xs = [];
-ys = [];
+xs = [x];
+ys = [y];
 
 d = grad(x,y);
 while norm(d) >= e

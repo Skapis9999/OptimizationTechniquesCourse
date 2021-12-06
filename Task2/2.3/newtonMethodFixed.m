@@ -3,10 +3,10 @@ function [results,xs,ys] = newtonMethodFixed(e,x,y)
 k=1;
 results = [f(x,y)];
 gammaKappa = 1;
-xs = [];
-ys = [];
+xs = [x];
+ys = [y];
 
-d = grad(x,y);
+d = grad(x,y)
 while norm(d) >= e
     
     h = hessianMatrix(x,y);
@@ -15,8 +15,8 @@ while norm(d) >= e
         break
     end
     dk = -h'*d;
-    x = x  + gamma*dk(1);
-    y = y  + gamma*dk(2);
+    x = x  + gamma*dk(1)
+    y = y  + gamma*dk(2)
 
     k = k+1;
     results = [results, f(x,y)];

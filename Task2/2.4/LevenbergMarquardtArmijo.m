@@ -1,8 +1,8 @@
 function [results,xs,ys] = LevenbergMarquardtArmijo(e,x,y)
 k=1;
 results = [f(x,y)];
-xs = [];
-ys = [];
+xs = [x];
+ys = [y];
 
 d = grad(x,y);
 while norm(d) >= e
@@ -16,6 +16,7 @@ while norm(d) >= e
         if m > 1000
             disp('!!The hessian is not positive definite for any m-- Error!!')
             break
+        end
     end
     dk = hessianMatrix(x,y)/pM
     [x,y] = armijo(x,y,dk);
@@ -25,5 +26,6 @@ while norm(d) >= e
     d = grad(x,y); % d  for the next loop with new x and new y
     xs = [xs, x];
     ys = [ys, y];
+    end
 end
 
