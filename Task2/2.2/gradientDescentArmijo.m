@@ -2,7 +2,6 @@ function [results, xs, ys] = gradientDescentArmijo(epsilon,x,y)
 
 k=1;
 results = [f(x,y)];
-gammaKappa = 1;
 xs = [];
 ys = [];
 
