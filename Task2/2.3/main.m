@@ -20,7 +20,7 @@ epsilon = 0.001;
 
 % [d, xs, ys] = newtonMethodFixed(epsilon, x0(2), y0(2));
 % [d, xs, ys] = newtonMethod(epsilon, x0(3), y0(3));
-[d, xs, ys] = newtonMethodArmijo(epsilon, x0(3), y0(3));
+[d, xs, ys] = newtonMethodArmijo(epsilon, x0(1), y0(1));
 
 
 x = linspace(-2,2,20);

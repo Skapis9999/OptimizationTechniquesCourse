@@ -1,8 +1,8 @@
 function [results,xs,ys] = newtonMethodArmijo(e,x,y)
 k=1;
 results = [f(x,y)];
-xs = [];
-ys = [];
+xs = [x];
+ys = [y];
 
 d = grad(x,y);
 while norm(d) >= e
@@ -14,8 +14,6 @@ while norm(d) >= e
     end
     dk = -h'*d;
     [x,y] = armijo(x,y,dk);
-    x = x  + gamma*dk(1);
-    y = y  + gamma*dk(2);
 
     k = k+1;
     results = [results, f(x,y)];

@@ -2,8 +2,8 @@ function [results, xs, ys] = gradientDescentArmijo(epsilon,x,y)
 
 k=1;
 results = [f(x,y)];
-xs = [];
-ys = [];
+xs = [x];
+ys = [y];
 
 while norm(grad(x,y)) >= epsilon
     d = grad(x,y);
