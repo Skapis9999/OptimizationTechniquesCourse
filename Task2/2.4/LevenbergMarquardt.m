@@ -11,14 +11,15 @@ while norm(d) >= e
     m = 0; %m0 = 0
     pM = h + m*eye(size(h)); %positive defined Matrix
     if pM(1,1)<=0 || pM(1,1)*pM(2,2)-pM(1,2)*pM(2,1)<=0
-        m = m + 1;
+        m = m + 0.5;
         pM = h+m*eye(size(h));
         if m > 1000
             disp('!!The hessian is not positive definite for any m-- Error!!')
             break
+        end
     end
-    dk = -h/pM
-    gammaKappa = goldenRatioMethod(x,y,dk)
+    dk = -d/pM;
+    gammaKappa = goldenRatioMethod(x,y,dk);
     x = x + gammaKappa*dk(1);
     y = y + gammaKappa*dk(2);
     k = k+1;
@@ -27,5 +28,6 @@ while norm(d) >= e
     xs = [xs, x];
     ys = [ys, y];
 
-end
+    end
+l = length(xs)
 end
