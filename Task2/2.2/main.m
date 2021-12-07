@@ -37,8 +37,8 @@ epsilon = 0.001;
 %% 
 %%Method
 i = 2; %x0 that we choose
-% [~, xs, ys] = gradientDescentFixed(epsilon, x0(i), y0(i));
-[~, xs, ys] = gradientDescent(epsilon, x0(i), y0(i));
+[~, xs, ys] = gradientDescentFixed(epsilon, x0(i), y0(i));
+% [~, xs, ys] = gradientDescent(epsilon, x0(i), y0(i));
 % [~, xs, ys] = gradientDescentArmijo(epsilon, x0(i), y0(i));
 figure(2)
 clf
@@ -51,9 +51,9 @@ legend('z','steps','final solution')
 xlabel('x')
 ylabel('y')
 zlabel('z')
-% title('z = $x^{3} * e^{-x^{2} - y^{4}}$ with steps for Gradient Descent Method for gamma = 1 for (1,1)','Interpreter','latex')
+title('z = $x^{3} * e^{-x^{2} - y^{4}}$ with steps for Gradient Descent Method for gamma = 1 for (1,1)','Interpreter','latex')
 % title('z = $x^{3} * e^{-x^{2} - y^{4}}$ with steps for Gradient Descent Method best gamma for (-1,-1)','Interpreter','latex')
-title('z = $x^{3} * e^{-x^{2} - y^{4}}$ with steps for Gradient Descent Method Armijo gamma for (-1,-1)','Interpreter','latex')
+% title('z = $x^{3} * e^{-x^{2} - y^{4}}$ with steps for Gradient Descent Method Armijo gamma for (-1,-1)','Interpreter','latex')
 
 
 
@@ -67,4 +67,4 @@ scatter(xs(end),ys(end),'p','k')
 legend('z','steps','final solution')
 xlabel('x')
 ylabel('y')
-title('z = $x^{3} * e^{-x^{2} - y^{4}}$ with steps for Gradient Descent Method Armijo gamma for (-1,-1)','Interpreter','latex')
+title('z = $x^{3} * e^{-x^{2} - y^{4}}$ with steps for Gradient Descent Method for gamma = 0.1 for (-1,-1)','Interpreter','latex')

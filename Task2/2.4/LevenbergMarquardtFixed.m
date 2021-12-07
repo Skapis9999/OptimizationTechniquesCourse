@@ -1,7 +1,7 @@
 function [results,xs,ys] = LevenbergMarquardtFixed(e,x,y)
 k=1;
 results = [f(x,y)];
-gammaKappa = 0.4;
+gammaKappa = 0.1;
 xs = [x];
 ys = [y];
 

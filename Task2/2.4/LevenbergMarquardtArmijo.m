@@ -18,14 +18,14 @@ while norm(d) >= e
             break
         end
     end
-    dk = hessianMatrix(x,y)/pM
+    dk = -d/pM
     [x,y] = armijo(x,y,dk);
-
     k = k+1;
     results = [results, f(x,y)];
     d = grad(x,y); % d  for the next loop with new x and new y
     xs = [xs, x];
     ys = [ys, y];
-    end
+end
+l = length(xs)
 end
 
