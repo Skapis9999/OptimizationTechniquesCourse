@@ -18,7 +18,7 @@ epsilon = 0.001;
 %%
 %%Method
 
-i = 1; %x0 that we choose
+i = 2; %x0 that we choose
 [~, xs, ys] = newtonMethodFixed(epsilon, x0(i), y0(i));
 % [~, xs, ys] = newtonMethod(epsilon, x0(i), y0(i));
 % [~, xs, ys] = newtonMethodArmijo(epsilon, x0(i), y0(i));

@@ -34,5 +34,6 @@ while norm(d) >= e
 %         break
 %     end
 end
+l = length(xs)
 end
 

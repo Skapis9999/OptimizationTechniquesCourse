@@ -13,5 +13,6 @@ while norm(grad(x,y)) >= epsilon
     xs = [xs, x];
     ys = [ys, y];
 end  
+l = length(xs)
 end
 
