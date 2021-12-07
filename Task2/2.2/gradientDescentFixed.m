@@ -2,7 +2,7 @@ function [results, xs, ys] = gradientDescentFixed(epsilon,x,y)
 
 k=1;
 results = [f(x,y)];
-gammaKappa = 0.25;
+gammaKappa = 1.2;
 xs = [x];
 ys = [y];
 
