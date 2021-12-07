@@ -3,7 +3,6 @@ function [x_new,y_new] = armijo(x,y,d)
     a=0.01; %alpha should be between 10^-5 and 0.1
     b=0.3;  %beta should be between 0.1 and 0.5
     m=0;
-    
     gammaKappa = s*b^m;
     x_new = x + gammaKappa*d(1);
     y_new = y + gammaKappa*d(2);

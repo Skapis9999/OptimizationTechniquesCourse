@@ -20,8 +20,6 @@ temp1 = gammaOptimal(x,y,d,x1);
 temp2 = gammaOptimal(x,y,d,x2);
         
 while  b-a >= l
-    x1 = a + gamma*(b-a);
-    x2 = a + (1-gamma)*(b-a);
     if temp1 > temp2
        a = x1;
        x1 = x2;

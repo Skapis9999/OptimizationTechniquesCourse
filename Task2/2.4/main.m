@@ -16,9 +16,9 @@ epsilon = 0.001;
 
 %%
 %%Method
-i = 1; %x0 that we choose
-% [d, xs, ys] = LevenbergMarquardtFixed(epsilon, x0(i), y0(i));
-[d, xs, ys] = LevenbergMarquardt(epsilon, x0(i), y0(i));
+i = 2; %x0 that we choose
+[d, xs, ys] = LevenbergMarquardtFixed(epsilon, x0(i), y0(i));
+% [d, xs, ys] = LevenbergMarquardt(epsilon, x0(i), y0(i));
 % [~, xs, ys] = LevenbergMarquardtArmijo(epsilon, x0(i), y0(i));
 
 x = linspace(-2,2,20);
