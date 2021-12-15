@@ -12,15 +12,19 @@ while norm(grad(x,y)) >= epsilon
     while xl>x_bar || xu<x_bar
         if xl>x_bar  
             x_bar = xl;
+%             disp("provoli")
         elseif xu<x_bar
-            x_bar = xu; 
+            x_bar = xu;
+%             disp("provoli")
         end
     end
     while yl>y_bar || yu<y_bar
         if yl>y_bar
             y_bar = yl;
+%             disp("provoli")
         elseif yu<y_bar
             y_bar = yu; 
+%             disp("provoli")
         end
     end
     x = x + gammaKappa*(x_bar - x);
@@ -29,7 +33,7 @@ while norm(grad(x,y)) >= epsilon
     results = [results, f3(x,y)];
     xs = [xs, x];
     ys = [ys, y];
-    l = length(xs)
+    l = length(xs);
     if l > 200
         break
     end

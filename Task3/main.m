@@ -30,7 +30,7 @@ ylabel('y')
 zlabel('z')
 title('3-D plot of z = $0.5*x^{2} +2*y^{2}$ ','Interpreter','latex')
 
-[~, xs, ys] = gradientDescentFixed(epsilon, x0, y0, gamma(1));
+[~, xs, ys] = gradientDescentFixed(epsilon, x0, y0, gamma(2));
 
 figure(2)
 clf
