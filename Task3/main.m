@@ -36,9 +36,9 @@ figure(2)
 clf
 surf(x,y,z)
 hold on
-scatter3(xs,ys,(xs.^3).*(exp((-xs.^2)-(ys.^4))),'+','r')
+scatter3(xs,ys,0.5*(xs.^2)+2*(ys.^2),'+','r')
 hold on 
-scatter3(xs(end),ys(end),(xs(end)^3)*(exp((-xs(end)^2)-(ys(end)^4))),'p','y')
+scatter3(xs(end),ys(end),0.5*(xs(end).^2)+2*(ys(end).^2),'p','y')
 legend('z','steps','final solution')
 xlabel('x')
 ylabel('y')
@@ -55,4 +55,4 @@ scatter(xs(end),ys(end),'p','k')
 legend('z','steps','final solution')
 xlabel('x')
 ylabel('y')
-title('z = $0.5*x^{2} +2*y^{2}$ with steps for Gradient Descent Method for gamma = 0.05 for (1,1)','Interpreter','latex')
+title('z = $0.5*x^{2} +2*y^{2}$ with steps for Gradient Descent Method for gamma = 10 for (1,1)','Interpreter','latex')

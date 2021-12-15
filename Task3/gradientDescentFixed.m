@@ -1,5 +1,5 @@
 function [results, xs, ys] = gradientDescentFixed(epsilon,x,y,gammaKappa)
-
+l=0;
 k=1;
 results = [f3(x,y)];
 xs = [x];
@@ -13,7 +13,12 @@ while norm(grad(x,y)) >= epsilon
     results = [results, f3(x,y)];
     xs = [xs, x];
     ys = [ys, y];
+    l = length(xs);
+    if l > 200
+        break
+    end
 end
-l = length(xs);
+l = length(xs)
+
 end
 
