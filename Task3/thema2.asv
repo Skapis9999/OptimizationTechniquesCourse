@@ -1,0 +1,52 @@
+%%Clear Everything
+
+clearvars
+clc
+
+%%
+%%Info
+%Skapetis Christos
+%AEM 9378
+%skapetis@ece.auth.gr
+
+%%
+%%Init
+x_l = -20; %lower
+x_u = 10;  %upper
+y_l = -12; %lower
+y_u = 15;  %upper
+s = 15;
+gamma = 0.1;
+x0 = 8;
+y0 = 3;
+
+x = linspace(-2,2,20);
+y = x';
+z = 0.5*(x.^2)+2*(y.^2);
+
+[~, xs, ys] = gradientDescentFixed(epsilon, x0, y0, gamma,x_l,x_u,y_l,y_u,s) );
+
+figure(2)
+clf
+surf(x,y,z)
+hold on
+scatter3(xs,ys,0.5*(xs.^2)+2*(ys.^2),'+','r')
+hold on 
+scatter3(xs(end),ys(end),0.5*(xs(end).^2)+2*(ys(end).^2),'p','y')
+legend('z','steps','final solution')
+xlabel('x')
+ylabel('y')
+zlabel('z')
+title('z = $0.5*x^{2} +2*y^{2}$ with steps for Gradient Descent Method for gamma = 0.05 for (1,1)','Interpreter','latex')
+
+figure(3)
+clf
+fcontour(@(x,y) 0.5*(x^2)+2*(y^2),[-2, 2])
+hold on
+scatter(xs,ys,'+','r')
+hold on 
+scatter(xs(end),ys(end),'p','k')
+legend('z','steps','final solution')
+xlabel('x')
+ylabel('y')
+title('z = $0.5*x^{2} +2*y^{2}$ with steps for Gradient Descent Method for gamma = 10 for (1,1)','Interpreter','latex')
